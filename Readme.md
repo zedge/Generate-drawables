@@ -3,7 +3,8 @@
 __Applescript for creating Android drawables. The script takes the front-most
 document of Photoshop CS3 & the path to your res-folder. Using these, the
 script generates an image for all the dpi's and puts it in it's corresponding
-directory.__
+directory.__  
+_PS. The initial state of your document must be hdpi._
 
 
 ## Installation
