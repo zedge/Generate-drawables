@@ -1,13 +1,18 @@
 TARGET=drawables.app
 SOURCE=drawables.scpt
+APP=/Applications
 
 
-.PHONY: install clean
+.PHONY: clean default install
+
+
+default: $(TARGET)
+
+clean:
+	rm -Rf $(TARGET)
 
 $(TARGET): $(SOURCE)
 	osacompile -o $@ $^
 
-install: $(TARGET)
-
-clean:
-	rm -Rf $(TARGET)
+install:
+	cp -r $(TARGET) $(APP)
