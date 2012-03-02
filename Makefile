@@ -13,6 +13,7 @@ clean:
 
 $(TARGET): $(SOURCE)
 	osacompile -o $@ $^
+	cp applet.icns $@/Contents/Resources/
 
 install:
-	cp -r $(TARGET) $(APP)
+	cp -r $(TARGET) $(APP)/
