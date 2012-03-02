@@ -1,6 +1,7 @@
 TARGET=drawables.app
 SOURCE=drawables.scpt
 APP=/Applications
+ICON=res/applet.icns
 
 
 .PHONY: clean default install
@@ -13,7 +14,7 @@ clean:
 
 $(TARGET): $(SOURCE)
 	osacompile -o $@ $^
-	cp applet.icns $@/Contents/Resources/
+	cp $(ICON) $@/Contents/Resources/
 
 install:
 	cp -r $(TARGET) $(APP)/
