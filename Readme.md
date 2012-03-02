@@ -11,7 +11,7 @@ correct. This is due to limited scripting capabilities of CS3._
 ## Installation
 
     λ make
-    λ make install
+    λ sudo make install
 
 
 ## Contributors

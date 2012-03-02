@@ -1,4 +1,4 @@
-TARGET=drawables.app
+TARGET=Drawables.app
 SOURCE=drawables.scpt
 APP=/Applications
 ICON=res/applet.icns
@@ -14,7 +14,8 @@ clean:
 
 $(TARGET): $(SOURCE)
 	osacompile -o $@ $^
-	cp $(ICON) $@/Contents/Resources/
+	cp -f $(ICON) $@/Contents/Resources/
 
 install:
-	cp -r $(TARGET) $(APP)/
+	cp -r $(TARGET) $(APP)
+	chown -R root:wheel "$(APP)/$(TARGET)"
